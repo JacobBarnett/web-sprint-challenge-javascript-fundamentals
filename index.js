@@ -59,14 +59,8 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(){
-    const displayNames = []
-    zooAnimals.forEach(function (animal) {
-      displayNames.push(`name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
-    })
-    return displayNames;
-  }
- const displayNames = animalNames()
+  function animalNames()
+    
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -74,23 +68,14 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(){
-    return zooAnimals.map(function (animal) {
-      return animal.animal_name.toLowerCase()
-    });
-  }
-  
-  
+  function lowerCaseNames()
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(){
-    return zooAnimals.filter(function (animal) {
-      return animal.population < 5
-    })
-  }
+  function lowPopulationAnimals()
+  
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -99,11 +84,7 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    return zooAnimals.reduce(function(prev, current) {
-      return prev + current.population
-    }, 0)
-  }
+  function USApop(/*Your Code Here*/)
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -183,6 +164,8 @@ CuboidMaker.prototype.surfaceArea = function() {
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
+const cuboid = new CuboidMaker({length: 4, width: 5, height: 5})
+
 
 
 
@@ -194,6 +177,22 @@ CuboidMaker.prototype.surfaceArea = function() {
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
+class CuboidMakerTwo{
+  constructor({length, width, height}) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
+
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
+  }
+
+}
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
