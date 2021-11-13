@@ -39,7 +39,6 @@ describe('fooFunction', ()=>{
 
 describe('animalNames', ()=>{
     it('animalNames returns an array', ()=>{
-      console.log("!!!", functions.animalNames(zooAnimals));
         expect(functions.animalNames(zooAnimals)).toEqual(expect.arrayContaining(
             ["name: Jackal, asiatic, scientific: Canis aureus", "name: Screamer, southern, scientific: Chauna torquata", "name: White spoonbill, scientific: Platalea leucordia", "name: White-cheeked pintail, scientific: Anas bahamensis", "name: Black-backed jackal, scientific: Canis mesomelas", "name: Brolga crane, scientific: Grus rubicundus", "name: Common melba finch, scientific: Pytilia melba", "name: Pampa gray fox, scientific: Pseudalopex gymnocercus", "name: Hawk-eagle, crowned, scientific: Spizaetus coronatus", "name: Australian pelican, scientific: Pelecanus conspicillatus"]
         ));
