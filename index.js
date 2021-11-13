@@ -59,8 +59,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames()
-    
+  function animalNames(){
+    const displayNames = []
+    zooAnimals.forEach(function (animal) {
+      displayNames.push(`name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
+    })
+    return displayNames;
+  }
+ const displayNames = animalNames();
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -68,14 +74,15 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames()
+  function lowerCaseNames();
+    
+  
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals()
-  
+  function lowPopulationAnimals();
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -84,8 +91,7 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/)
-  
+  function USApop(/*Your Code Here*/);
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
